@@ -1,0 +1,11 @@
+@import "~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss";
+
+.panel {
+  .tituloCom {
+    @include ms-font-xl;
+    color: $ms-color-themePrimary;
+  }
+  .cuerpoCom {
+    background-color: #bbb;
+  }
+}

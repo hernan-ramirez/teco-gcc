@@ -1,0 +1,36 @@
+@import "~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss";
+
+.comunicaciones {
+  .cabecera {
+    color: $ms-color-themePrimary;
+    padding: 20px;
+
+    .titulo {
+      @include ms-font-xl;
+    }
+    .tipo {
+      @include ms-font-l;
+      text-align: right;
+    }
+    .fecha {
+      @include ms-font-l;
+      text-align: right;
+    }
+    .cuerpo {
+      @include ms-font-m;
+      color: $ms-color-themeTertiary;
+    }
+  }
+
+  .error {
+    color: $ms-color-red;
+
+    .msg {
+      font-style: italic;
+    }
+  }
+
+  .info {
+    text-align: center;
+  }
+}

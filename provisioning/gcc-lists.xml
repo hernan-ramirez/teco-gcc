@@ -1,0 +1,1914 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2019/03/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=3.9.1905.3, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-7A495F891B8A4D1FB68C31C7468A413D">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-7A495F891B8A4D1FB68C31C7468A413D" Version="1" BaseSiteTemplate="SITEPAGEPUBLISHING#0" Scope="RootSite">
+      <pnp:Lists>
+        <pnp:ListInstance Title="Contratistas" Description="" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/Contratistas" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableAttachments="false" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Contratistas/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Contratistas/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Contratistas/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=45" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:PropertyBagEntries>
+            <pnp:PropertyBagEntry Key="PowerAppFormProperties" Value="{&quot;AppId&quot;:&quot;5aa2b2d0-a4b4-49f7-bbc2-5b29b7df89a6&quot;,&quot;AppRenderInfo&quot;:{&quot;PrimaryDeviceWidth&quot;:&quot;444&quot;,&quot;PrimaryDeviceHeight&quot;:&quot;790&quot;,&quot;BackgroundColor&quot;:&quot;rgba(0, 176, 240, 1)&quot;},&quot;AdditionalData&quot;:&quot;{\&quot;cdnUrl\&quot;:\&quot;https://content.powerapps.com/resource/app\&quot;,\&quot;preLoadIdx\&quot;:\&quot;https://content.powerapps.com/resource/app/ic4bg32fshj7c/preloadindex.web.html\&quot;,\&quot;id\&quot;:\&quot;636899020749236047\&quot;,\&quot;v\&quot;:2.1,\&quot;shortSplash\&quot;:true}&quot;,&quot;ContentTypeStates&quot;:{&quot;0x0100EDA1857E57AD734B94AEB059D1D5887D&quot;:2},&quot;CacheInfo&quot;:{&quot;CachedFileUrlTemplate&quot;:&quot;https://cablevisionfibertel.sharepoint.com/sites/gcc/Lists/Contratistas/_PowerAppsCache/5aa2b2d0-a4b4-49f7-bbc2-5b29b7df89a6_636899020749236047/{0}.appfile?ctag=10&quot;,&quot;Timestamp&quot;:&quot;636899020749236047&quot;,&quot;AppFiles&quot;:[&quot;images/icon.png&quot;,&quot;index.html&quot;,&quot;index.web.html&quot;,&quot;index.win.html&quot;,&quot;js/init.js&quot;,&quot;manifest.json&quot;,&quot;metadata.json&quot;,&quot;publisherInfo.txt&quot;],&quot;ContentTag&quot;:10},&quot;Version&quot;:1}" Overwrite="false" />
+          </pnp:PropertyBagEntries>
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{C4E9C16C-F9BD-44D1-B0AF-BBBDFAE0E732}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="Todos los elementos" Url="{site}/Lists/Contratistas/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="Region" />
+                <FieldRef Name="Subregion" />
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="Email" />
+                <FieldRef Name="EmailDevolucion" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+              <CustomFormatter />
+              <ColumnWidth>
+                <FieldRef Name="Email" width="243" />
+                <FieldRef Name="EmailDevolucion" width="206" />
+              </ColumnWidth>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field Type="Text" DisplayName="Región" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="TRUE" MaxLength="255" ID="{acce9749-ae9a-44b3-8e6b-05e5c1730a68}" SourceID="{{listid:Contratistas}}" StaticName="Region" Name="Region" ColName="nvarchar4" RowOrdinal="0" CustomFormatter="" Version="2" />
+            <Field Type="Text" DisplayName="Subregión" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="TRUE" MaxLength="255" ID="{651194de-f79d-4cc3-97b4-9ad0d8f2fccc}" SourceID="{{listid:Contratistas}}" StaticName="Subregion" Name="Subregion" ColName="nvarchar5" RowOrdinal="0" CustomFormatter="" Version="2" />
+            <Field DisplayName="Email Notificación" Format="Dropdown" MaxLength="255" Title="Email" Type="Text" ID="{3b17e497-99e2-416a-8342-5d782f07f59f}" SourceID="{{listid:Contratistas}}" StaticName="Email" Name="Email" ColName="nvarchar6" RowOrdinal="0" CustomFormatter="" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="TRUE" Version="4" Description="Éste es el email donde serán enviadas las notificaciones a los contratistas" />
+            <Field DisplayName="Email Devolución" Format="Dropdown" MaxLength="255" Title="EmailDevolucion" Type="Text" ID="{45b32415-72e4-4ee7-946e-2f1f375db23a}" SourceID="{{listid:Contratistas}}" StaticName="EmailDevolucion" Name="EmailDevolucion" ColName="nvarchar7" RowOrdinal="0" CustomFormatter="" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Version="1" />
+          </pnp:Fields>
+          <pnp:DataRows UpdateBehavior="Overwrite">
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Santa Fe Norte</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">JAE SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">ordenes@jae.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">santaFe.norte@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">1_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Centro</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Córdoba</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">RAMIREZ HNOS SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">HRamirez@proveedor.teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">hernan.ramirez@outlook.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">7_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">AYKO S.A.</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">SeELopez@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">SeELopez@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">8_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">CENTRAL SERVICIOS ESPECIALES SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">CAScattolaro@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">ascattol@gmail.com</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">9_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">EMP.DE SERV.Y CONST.CIVILES S.R.L.</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">ordenes@construccionesCiviles.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">chaco.formosa@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">1000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">10_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Santa Fe Norte</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">PADUAN MARCELO</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">LeoRojas@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">LeoRojas@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">1100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">11_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Santa Fe Norte</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">TEDECO S.R.L.</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">JaUlevich@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">JaUlevich@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">1200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">12_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Santa Fe Norte</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">QUALITY PLUS S.R.L</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">CADiPaolo@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">cdipaolo2000@gmail.com</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">1300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">13_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">LAGLAIVE HNOS SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">MIGimenez@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">lghlaglaiveredes@gmail.com</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">1700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">17_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">POLYMONT</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">DEBonnin@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">DEBonnin@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">1800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">18_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">H&amp;R</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">JLRamirez@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">ramirodevico@hotmail.com</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">2000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">20_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Santa Fe Norte</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">SEPCOM S.R.L</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">LeoRojas@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">LeoRojas@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">2100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">21_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Mediterranea</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Cordoba Sur</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">PADUAN MARCELO</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">LeoRojas@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">LeoRojas@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">2200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">22_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">RAMIREZ HNOS SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">HRamirez@proveedor.teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">hernan.ramirez@outlook.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">2300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">23_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">CABA</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Pilar</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">RAMIREZ HNOS SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">HRamirez@proveedor.teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">hernan.ramirez@outlook.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">2400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">24_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Patagonia</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Neuquen</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">RAMIREZ HNOS SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">HRamirez@proveedor.teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">hernan.ramirez@outlook.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">2500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">25_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Patagonia</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chubut</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">RAMIREZ HNOS SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">HRamirez@proveedor.teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">hernan.ramirez@outlook.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">2600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">26_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">AYKO S.A.</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">aroldan@aykoargentina.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">CHF_AO@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">2700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">27_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">CENTRAL SERVICIOS ESPECIALES SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">silvinamuchut@gmail.com</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">CHF_AO@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">2800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">28_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">LAGLAIVE HNOS SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">lghlaglaiveredes@gmail.com</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">CHF_AO@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">2900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">29_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">POLYMONT</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">serviciotelecomnea@polymont.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">CHF_AO@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">3000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">30_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">H&amp;R</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">ramirodevico@hotmail.com</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">CHF_AO@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">3100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">31_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">FABRICA SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">oficinatecnica@fabricasrl.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">CHF_AO@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">3200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">32_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">CONECTANDO RED.TEL.FY SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">sergemercedesctes@gmail.com</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">CHF_AO@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">3300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">33_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">CINECTICA S.A.</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">lsosa@cineticasa.com</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">CHF_AO@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">3400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">34_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">EDESSYC SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">carlos@edesycc.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">CHF_AO@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">3500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">35_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">FABRICA SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">oficinatecnica@fabricasrl.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">CHF_AO@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">3600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">36_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">INTHER SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">inther@inther.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">CHF_AO@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">3700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">37_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">REDETEC</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">tecnica@redetec.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">CHF_AO@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">3800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">38_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">SOTO COMUNICACIONES</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">mauricio@sotocomunicaciones.com</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">CHF_AO@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">3900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">39_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">SERVICIOS ELECTROMECANICOS-Milessi</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">rhcanteros@hotmail.com</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">CHF_AO@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">4000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">40_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">ENTRE RIOS</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">SEPCOM</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">sepcom@sepcom.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AT_ERIOS@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">4100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">41_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">ENTRE RIOS</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">WALLCOMS</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">anirumberger@wallcoms.com</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AT_ERIOS@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">4200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">42_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">ENTRE RIOS</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">COL &amp; MOL</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">ogilardino@colymol.com</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AT_ERIOS@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">4300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">43_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">ENTRE RIOS</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">POLYMONT</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">serviciotelecomnea@polymont.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AT_ERIOS@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">4400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">44_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">ENTRE RIOS</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">INTHER SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">inther@inther.com.ar; mantenimiento@inther.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AT_ERIOS@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">4500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">45_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">ENTRE RIOS</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">CINETICA S.A</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">lsosa@cineticasa.com</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AT_ERIOS@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">4600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">46_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">ENTRE RIOS</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">SOCELEC</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">ventas5@socelec.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AT_ERIOS@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">4700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">47_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">ENTRE RIOS</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">ADOBE</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">carlos@adobeconstrucciones.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AT_ERIOS@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">4800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">48_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">ENTRE RIOS</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">OIC</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">certificacionoicsrl@arnetbiz.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AT_ERIOS@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">4900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">49_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">ENTRE RIOS</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">INGENET S.R.L.</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">rogelio.rodriguez@ingenetsrl.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AT_ERIOS@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">5000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">50_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Gran Rosario-Santa Fe Sur</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">ADOBE CONSTRUCCIONES S.R.L.</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">carlos@adobeconstrucciones.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">ATROS-SFS@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">5100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">51_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Gran Rosario-Santa Fe Sur</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">AYKO S.A.</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">contacto@aykosa.com</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">ATROS-SFS@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">5200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">52_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Gran Rosario-Santa Fe Sur</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">CONSTRUCCIONES Y AGROINDUSTRIA</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">saul@caasanetworks.com</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">ATROS-SFS@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">5300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">53_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Gran Rosario-Santa Fe Sur</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">CINETICA S. A.</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">lsosa@cineticasa.com</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">ATROS-SFS@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">5400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">54_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Gran Rosario-Santa Fe Sur</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">INGENET S.R.L.</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">maria.scarafia@ingenetsrl.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">ATROS-SFS@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">5500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">55_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Gran Rosario-Santa Fe Sur</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">INTHER SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">inther@inther.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">ATROS-SFS@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">5600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">56_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Gran Rosario-Santa Fe Sur</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">MOVITEL SERVICIOS S.R.L</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">g.conde@cvconsultores.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">ATROS-SFS@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">5700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">57_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Gran Rosario-Santa Fe Sur</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">NOYA ADRIANA PATRICIA</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">aewcom@alice.it</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">ATROS-SFS@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">5800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">58_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Gran Rosario-Santa Fe Sur</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">ORGANIZACION INDUST.CONSTR.S.A.</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">oicsrl@arnet.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">ATROS-SFS@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">5900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">59_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Gran Rosario-Santa Fe Sur</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">POLYMONT ARGENTINA S.A.</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">polymont@polymont.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">ATROS-SFS@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">6000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">60_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Gran Rosario-Santa Fe Sur</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">QUALITY PLUS S.R.L</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">vnegri@qpsrl.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">ATROS-SFS@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">6100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">61_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Gran Rosario-Santa Fe Sur</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">SEPCOM S.R.L.</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">sepcom@sepcom.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">ATROS-SFS@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">6200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">62_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Gran Rosario-Santa Fe Sur</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">TEDECO S.R.L.</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">tedecosrl@yahoo.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">ATROS-SFS@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">6300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">63_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Gran Rosario-Santa Fe Sur</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">WALLCOMS S.A.</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">gscarpelli@wallcoms.com</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">ATROS-SFS@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">6400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">64_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Gran Rosario-Santa Fe Sur</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">COL &amp; MOL COMUNICACIONES S.R.L</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">matiasmoyano@colymol.com</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">ATROS-SFS@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">6500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">65_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Gran Rosario-Santa Fe Sur</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">ADECEF S.A.</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">gmarchetti@adecef.com</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">ATROS-SFS@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">6600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">66_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Gran Rosario-Santa Fe Sur</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">PUNTO GESTION SA</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">contacto@pegesa.net</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">ATROS-SFS@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">6700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">67_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Gran Rosario-Santa Fe Sur</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">RASO GUSTAVO CRISTIAN</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">wasabiflash@hotmail.com</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">ATROS-SFS@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">6800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">68_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Santa Fe Norte</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">JAE SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">ordenes@jae.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AT_SFENORTE@TECO.COM.AR</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">6900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">69_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Santa Fe Norte</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">PADUAN MARCELO</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">AT_SFENORTE@TECO.COM.AR</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">LeoRojas@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">7000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">70_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Santa Fe Norte</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">TEDECO S.R.L.</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">JaUlevich@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">gerencia@tedeco.srl.com</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">7100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">71_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Santa Fe Norte</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">QUALITY PLUS S.R.L</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">cdipaolo2000@gmail.com</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">CADiPaolo@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">7200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">72_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Santa Fe Norte</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">SEPCOM S.R.L</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">LeoRojas@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">sepcomsrl@hotmail.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">7300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">73_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Santa Fe Norte</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">POLIMONT</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">serviciotelecomnea@polymont.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AT_SFENORTE@TECO.COM.AR</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">7400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">74_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Santa Fe Norte</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">COL&amp;MOL</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">ogilardino@colymol.com</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AT_SFENORTE@TECO.COM.AR</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">7500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">75_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Santa Fe Norte</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">WALLCOM</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">anirumberger@wallcoms.com</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AT_SFENORTE@TECO.COM.AR</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">7600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">76_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Santa Fe Norte</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">SERVICIOS ELECTROMECANICOS</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">ingeniar@arnet.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AT_SFENORTE@TECO.COM.AR</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">7700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">77_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Santa Fe Norte</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">INTHER</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">administracion@inther.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AT_SFENORTE@TECO.COM.AR</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">7800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">78_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Santa Fe Norte</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">CINETICA</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">info@cineticasa.com</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AT_SFENORTE@TECO.COM.AR</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">7900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">79_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Corrientes Misiones</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">AYKO S.A.</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">prevencion@aykoargentina.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AO-FSCOM@teco.com.ar&gt;</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">9600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">96_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Corrientes Misiones</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">SERVICIOS ELECTROMECANICOS</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">ingeniar@arnet.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AO-FSCOM@teco.com.ar&gt;</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">9700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">97_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Corrientes Misiones</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">INTHER</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">administracion@inther.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AO-FSCOM@teco.com.ar&gt;</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">9800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">98_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Corrientes Misiones</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">CINETICA</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">info@cineticasa.com</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AO-FSCOM@teco.com.ar&gt;</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">9900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">99_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Corrientes Misiones</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">WALLCOM</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">anirumberger@wallcoms.com</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AO-FSCOM@teco.com.ar&gt;</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">10000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">100_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Corrientes Misiones</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">POLIMONT</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">serviciotelecomnea@polymont.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AO-FSCOM@teco.com.ar&gt;</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">10100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">101_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Corrientes Misiones</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">SOTO COMUNICACIONES</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">mauricio@sotocomunicaciones.com</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AO-FSCOM@teco.com.ar&gt;</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">10200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">102_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Corrientes Misiones</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">FABRICA SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">oficinatecnica@fabricasrl.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AO-FSCOM@teco.com.ar&gt;</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">10300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">103_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Corrientes Misiones</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">CONECTANDO RED.TEL.FY SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">sergemercedesctes@gmail.com</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AO-FSCOM@teco.com.ar&gt;</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">10400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">104_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Corrientes Misiones</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">CONEXIÓN LITORAL SA - CLSA</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">hjs@carloseenriquezsa.com</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AO-FSCOM@teco.com.ar&gt;</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">10500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">105_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Corrientes Misiones</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">BAPIRAN</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">mariano.hardy@bapiram.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AO-FSCOM@teco.com.ar&gt;</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">10600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">106_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Corrientes Misiones</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Todo Cable SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">todocablesrl@hotmail.com</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AO-FSCOM@teco.com.ar&gt;</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">10700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">107_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Corrientes Misiones</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">PS DATA S.A.</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">mantenimientoCV@psdata.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AO-FSCOM@teco.com.ar&gt;</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">10800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">108_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Corrientes Misiones</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">REDYCON SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">redyconsrl@gmail.com</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AO-FSCOM@teco.com.ar&gt;</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">10900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">109_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Corrientes Misiones</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">SOLUCIONES INTELIGENTES SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">solucionesai@hotmail.com</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AO-FSCOM@teco.com.ar&gt;</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">11000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">110_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Corrientes Misiones</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Gustavo Carruega</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">telcoredsrl@gmail.com</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailDevolucion">AO-FSCOM@teco.com.ar&gt;</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">11100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">111_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+          </pnp:DataRows>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="Eventos" Description="" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/Eventos" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Eventos/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Eventos/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Eventos/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=45" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{AAE26F94-61A8-41F6-88D9-A51610A8F49F}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="Todos los elementos" Url="{site}/Lists/Eventos/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="Contratista" />
+                <FieldRef Name="Identificador" />
+                <FieldRef Name="TipoEvento" />
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="Estado" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <Aggregations Value="Off" />
+              <JSLink>clienttemplates.js</JSLink>
+              <CustomFormatter />
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field Type="Text" DisplayName="Región" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{3f91330a-f336-4c9c-b3ad-c5205a008d3f}" SourceID="{{listid:Eventos}}" StaticName="Region" Name="Region" ColName="nvarchar4" RowOrdinal="0" CustomFormatter="" Version="1" />
+            <Field Type="Text" DisplayName="Subregión" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{6c757478-d75c-447d-b8d7-a2fb53dd1241}" SourceID="{{listid:Eventos}}" StaticName="Subregion" Name="Subregion" ColName="nvarchar5" RowOrdinal="0" CustomFormatter="" Version="1" />
+            <Field Type="Number" DisplayName="Identificador" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="FALSE" ID="{b40ab8a4-c880-48eb-9d42-fa77d72d05e6}" SourceID="{{listid:Eventos}}" StaticName="Identificador" Name="Identificador" ColName="float1" RowOrdinal="0" />
+            <Field DisplayName="Tipo de Evento" FillInChoice="FALSE" Format="Dropdown" Title="TipoEvento" Type="Choice" ID="{09b6f11b-ed7d-4356-8309-02b41d63980e}" SourceID="{{listid:Eventos}}" StaticName="TipoEvento" Name="TipoEvento" ColName="nvarchar6" RowOrdinal="0" CustomFormatter="" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="FALSE" Version="1">
+              <CHOICES>
+                <CHOICE>Genérico</CHOICE>
+                <CHOICE>Información</CHOICE>
+                <CHOICE>Tarea</CHOICE>
+                <CHOICE>Riesgo de trabajo</CHOICE>
+                <CHOICE>Multa</CHOICE>
+                <CHOICE>Cotización</CHOICE>
+              </CHOICES>
+            </Field>
+            <Field AppendOnly="FALSE" DisplayName="Cuerpo" Format="Dropdown" IsolateStyles="FALSE" NumLines="6" RichText="FALSE" RichTextMode="Compatible" Title="Cuerpo" Type="Note" ID="{f1effa06-379c-4177-8c18-0917677effbc}" SourceID="{{listid:Eventos}}" StaticName="Cuerpo" Name="Cuerpo" ColName="ntext2" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="Estado" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="TRUE" MaxLength="255" ID="{24a24b41-4f5e-4fc8-beed-a1480312a167}" SourceID="{{listid:Eventos}}" StaticName="Estado" Name="Estado" ColName="nvarchar7" RowOrdinal="0" Version="1" />
+            <Field Type="Number" DisplayName="ContratistaID" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="TRUE" ID="{fa76034c-da1c-4745-bad7-b8d1753d5579}" SourceID="{{listid:Eventos}}" StaticName="ContratistaID" Name="ContratistaID" ColName="float2" RowOrdinal="0" Version="1" />
+            <Field Type="Text" DisplayName="ContratistaNombre" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{f92e0d5a-c579-4147-a190-9c3df3fada05}" SourceID="{{listid:Eventos}}" StaticName="ContratistaNombre" Name="ContratistaNombre" ColName="nvarchar8" RowOrdinal="0" />
+            <Field Type="Lookup" DisplayName="Contratista" Required="TRUE" EnforceUniqueValues="FALSE" List="{listid:Contratistas}" ShowField="Title" UnlimitedLengthInDocumentLibrary="FALSE" ID="{132f2448-18a6-446b-b324-c4b8e9d85e06}" SourceID="{{listid:Eventos}}" StaticName="Contratista" Name="Contratista" ColName="int1" RowOrdinal="0" Group="" Indexed="TRUE" Version="4" />
+          </pnp:Fields>
+          <pnp:DataRows UpdateBehavior="Overwrite">
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">7</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">150</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Tarea</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Evento HJR</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">Non modo carum sibi quemque, verum etiam vehementer carum esse? Qua ex cognitione facilior facta est investigatio rerum occultissimarum. Illud non continuo, ut aeque incontentae. Igitur ne dolorem quidem. Nunc omni virtuti vitium contrario nomine opponitur. Quantum Aristoxeni ingenium consumptum videmus in musicis?</pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Abierto</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">7</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">RAMIREZ HNOS SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">3300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">33_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">9</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">1</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Tarea</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Solicitud de tareas FC zona Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">Siniestro climatico en ebos formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Cerrado</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">9</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">CENTRAL SERVICIOS ESPECIALES SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">3400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">34_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">7</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">151</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Información</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Informaciones genéricas</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">Hoc etsi multimodis reprehendi potest, tamen accipio, quod dant. Istam voluptatem perpetuam quis potest praestare sapienti? Bestiarum vero nullum iudicium puto. Quis istud possit, inquit, negare? Quod ea non occurrentia fingunt, vincunt Aristonem; Duo Reges: constructio interrete. Illa videamus, quae a te de amicitia dicta sunt. Sed quid attinet de rebus tam apertis plura requirere?</pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Abierto</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">7</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">RAMIREZ HNOS SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">3500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">35_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Santa Fe Norte</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">12</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">1</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Genérico</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Para Tedeco con amor</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">Prueba</pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Abierto</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">12</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">TEDECO S.R.L.</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">3600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">36_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Santa Fe Norte</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">12</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">2</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Tarea</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Cambio de terminales</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">cambio de terminales en hipodromo</pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Abierto</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">12</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">TEDECO S.R.L.</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">3700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">37_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">8</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">1</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Información</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Comunicaciones</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">Global</pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Abierto</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">8</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">AYKO S.A.</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">3800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">38_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">8</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">2</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Tarea</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Sinuiestro SFE</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">Siniestro en HPN</pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Abierto</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">8</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">AYKO S.A.</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">3900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">39_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">8</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">3</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Tarea</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Mantenuimiento GPE A03</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">cambio de vano en GPE</pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Abierto</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">8</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">AYKO S.A.</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">4000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">40_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">7</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">152</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Genérico</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Evento de muestra</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">Descripción del Evento</pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Cerrado</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">7</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">RAMIREZ HNOS SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">4100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">41_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">18</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">1</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Tarea</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">y5y5y5y5</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">56y4y54y5y5y65</pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Cerrado</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">18</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">POLYMONT</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">4200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">42_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">17</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">1522</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Riesgo de trabajo</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Desvio inspeccion seguridad 147886</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">Fecha Insp: 12/04/2019 Nombre: Fulano de Tal Observaciones: VTV vencida - sin señalizacion. </pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Cerrado</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">17</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">LAGLAIVE HNOS SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">4300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">43_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">17</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">1523</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Multa</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Multa por Desvío de Seguridad</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">modificacion luego de cerrado?</pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Cerrado</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">17</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">LAGLAIVE HNOS SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">4400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">44_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">17</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">1524</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Tarea</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Siniestro 123192</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">Provincia - Localidad - Central - Armario</pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Abierto</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">17</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">LAGLAIVE HNOS SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">4500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">45_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">9</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">2</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Multa</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Aplicacion de multas</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">Se informa las multas del mes de Marzo</pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Cerrado</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">9</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">CENTRAL SERVICIOS ESPECIALES SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">4600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">46_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">9</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">3</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Tarea</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">solicitu de baterias</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">se pidebaterias varios eos</pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Abierto</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">9</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">CENTRAL SERVICIOS ESPECIALES SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">4700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">47_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">18</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">2</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Tarea</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Provision de Baterias</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">Provisión de baterías de Arranque GE</pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Cerrado</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">18</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">POLYMONT</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">4800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">48_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">10</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">133</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Información</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Nuevo evento para esta empresa</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">descripcion del evento a realizar</pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Abierto</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">10</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">EMP.DE SERV.Y CONST.CIVILES S.R.L.</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">4900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">49_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">10</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">134</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Tarea</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Eventos del tipo tarea</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">Descripcion del evento</pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Abierto</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">10</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">EMP.DE SERV.Y CONST.CIVILES S.R.L.</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">5000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">50_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">20</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">1</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Información</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Minutas de Reuniones</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">Se remiten las minutas realizadas </pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Abierto</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">20</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">H&amp;R</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">5100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">51_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">18</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">3</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Tarea</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Rutinas Mayo</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">SE solicita cumplimiento de rutinas en Sitio Nva Formosa, Tatane, Clorinda y Av Costanera</pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Cerrado</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">18</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">POLYMONT</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">5200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">52_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">9</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">4</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Riesgo de trabajo</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">informe de riesgo de trabajo</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">se enviaran tos los desvios correspondoientes a riesgo de trabajo del mes de ABRIL</pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Abierto</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">9</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">CENTRAL SERVICIOS ESPECIALES SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">5300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">53_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">18</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">4</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Información</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Solicitud de informacion</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">Se requiere aclaración y ampliación de Información sobre NP N 3</pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Abierto</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">18</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">POLYMONT</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">5400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">54_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Santa Fe Norte</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">11</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">1</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Tarea</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">REPARACIÓN AIRE SAN JUSTO</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">BUSCAR DE PERDIDAS CONDENSADOR</pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Abierto</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">11</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">PADUAN MARCELO</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">5500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">55_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Santa Fe Norte</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">11</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">2</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Tarea</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">REPARACIÓN GE SAN CARLOS</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">REEMPLAZO BATERIAS</pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Abierto</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">11</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">PADUAN MARCELO</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">5600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">56_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Santa Fe Norte</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">11</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">3</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Riesgo de trabajo</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">MULTA SEGURIDAD</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">RETOCADO</pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Abierto</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">11</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">PADUAN MARCELO</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">5700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">57_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Santa Fe Norte</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">11</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">4</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Información</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">NUEVO PROCEDIMIENTO REEMPLAZO POSTES</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">UTILIZACIÓN POSTES</pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Abierto</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">11</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">PADUAN MARCELO</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">5800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">58_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Mediterranea</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Cordoba Sur</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">22</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">1</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Tarea</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Movimiento de baterias </pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">Llevar baterias de la central GPE a la central HIP</pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Abierto</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">22</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">PADUAN MARCELO</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">5900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">59_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Santa Fe Norte</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">13</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">1</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Tarea</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Prueba 30/04</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">Prueba 30/04</pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Abierto</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">13</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">QUALITY PLUS S.R.L</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">6000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">60_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Centro</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Córdoba</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">7</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">153</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Genérico</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Evento Ramirez de Cordoba</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">Ratio quidem vestra sic cogit. Tertium autem omnibus aut maximis rebus iis, quae secundum naturam sint, fruentem vivere. Quae cum dixisset paulumque institisset, Quid est? Te ipsum, dignissimum maioribus tuis, voluptasne induxit, ut adolescentulus eriperes P. Qui est in parvis malis. Hoc non est positum in nostra actione. Et ille ridens: Video, inquit, quid agas; At quicum ioca seria, ut dicitur, quicum arcana, quicum occulta omnia?</pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Abierto</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">7</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">RAMIREZ HNOS SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">6100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">61_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Centro</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Córdoba</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">7</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">154</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Información</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Otro Evento de Ramirez en Cordoba</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">Otro Evento de Ramirez en Cordoba</pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Abierto</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">7</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">RAMIREZ HNOS SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">6200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">62_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">18</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">5</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Tarea</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Rutinas Julio</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">Se solicita realización de Rutinas preventivas correspondientes al mes de Julio</pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Abierto</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">18</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">POLYMONT</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">6300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">63_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">9</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">5</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Tarea</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">solicitud de tareas en resstencia</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">se envian las tareas del mes de MAYO</pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Abierto</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">9</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">CENTRAL SERVICIOS ESPECIALES SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">6400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">64_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">39</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">1</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoEvento">Genérico</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Email de pruebas</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">Esto es una prueba  Respecto al nuevo sistema de comunicacion con contratistas</pnp:DataValue>
+              <pnp:DataValue FieldName="Estado">Abierto</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">39</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaNombre">SOTO COMUNICACIONES</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">6500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">65_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+          </pnp:DataRows>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="Comunicaciones" Description="" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/Comunicaciones" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Comunicaciones/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Comunicaciones/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Comunicaciones/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=45" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{62E362E0-AD9F-433B-804F-B592493EB544}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="Todos los elementos" Url="{site}/Lists/Comunicaciones/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="ID" />
+                <FieldRef Name="Region" />
+                <FieldRef Name="Subregion" />
+                <FieldRef Name="Contratista" />
+                <FieldRef Name="Identificador" />
+                <FieldRef Name="Evento" />
+                <FieldRef Name="TipoComunicacion" />
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="FechaEnvio" />
+                <FieldRef Name="Email" />
+                <FieldRef Name="EstadoContratista" />
+                <FieldRef Name="Editor" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <Aggregations Value="Off" />
+              <JSLink>clienttemplates.js</JSLink>
+              <CustomFormatter />
+            </View>
+            <View Name="{2FDE9C71-BA49-413A-AFB3-330124642C29}" Type="HTML" DisplayName="Relaciones PEP" Url="{site}/Lists/Comunicaciones/Relaciones.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" />
+                </OrderBy>
+                <Where>
+                  <IsNotNull>
+                    <FieldRef Name="PEP" />
+                  </IsNotNull>
+                </Where>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="Region" />
+                <FieldRef Name="Subregion" />
+                <FieldRef Name="PEP" />
+                <FieldRef Name="Grafo" />
+                <FieldRef Name="Reserva" />
+                <FieldRef Name="OE" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <Aggregations Value="Off" />
+              <JSLink>clienttemplates.js</JSLink>
+              <CustomFormatter />
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field Type="Note" DisplayName="Cuerpo" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" NumLines="6" RichText="TRUE" RichTextMode="FullHtml" IsolateStyles="TRUE" Sortable="FALSE" ID="{56639a27-53b5-41d1-9f57-99034ceb1203}" SourceID="{{listid:Comunicaciones}}" StaticName="Cuerpo" Name="Cuerpo" ColName="ntext2" RowOrdinal="0" CustomFormatter="" RestrictedMode="TRUE" AppendOnly="FALSE" Version="2" />
+            <Field Type="Text" DisplayName="NPA" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{39cb252b-274b-450f-9ebb-4282895b4327}" SourceID="{{listid:Comunicaciones}}" StaticName="NPA" Name="NPA" ColName="nvarchar4" RowOrdinal="0" />
+            <Field Type="DateTime" DisplayName="Plazo" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" FriendlyDisplayFormat="Disabled" ID="{862c2f4b-d63a-45b7-b8a8-cb5d7c2579ca}" SourceID="{{listid:Comunicaciones}}" StaticName="Plazo" Name="Plazo" ColName="datetime1" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="Región" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{6b2c332e-5b6c-46c1-b70f-02b797f62adf}" SourceID="{{listid:Comunicaciones}}" StaticName="Region" Name="Region" ColName="nvarchar5" RowOrdinal="0" CustomFormatter="" Version="1" />
+            <Field Type="Text" DisplayName="Subregión" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{5aaef6bd-a93e-47e7-852c-fdfd0924e6fc}" SourceID="{{listid:Comunicaciones}}" StaticName="Subregion" Name="Subregion" ColName="nvarchar6" RowOrdinal="0" CustomFormatter="" Version="1" />
+            <Field Type="Text" DisplayName="Contratista" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{3c15726a-e42b-44ac-85e5-d1f8ce528bc3}" SourceID="{{listid:Comunicaciones}}" StaticName="Contratista" Name="Contratista" ColName="nvarchar7" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="Evento Tipo" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{578bc71c-1cce-430b-912c-a01ca6670f2f}" SourceID="{{listid:Comunicaciones}}" StaticName="EventoTipo" Name="EventoTipo" ColName="nvarchar8" RowOrdinal="0" CustomFormatter="" Version="1" />
+            <Field Type="Number" DisplayName="Identificador" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="FALSE" Decimals="0" ID="{e532b166-7af8-48f8-9519-698435f3833b}" SourceID="{{listid:Comunicaciones}}" StaticName="Identificador" Name="Identificador" ColName="float1" RowOrdinal="0" ShowInFiltersPane="Removed" Version="1" />
+            <Field Type="Text" DisplayName="Tipo de Comunicación" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{d1ed7403-eaf4-4e5d-a69d-9f65643c820a}" SourceID="{{listid:Comunicaciones}}" StaticName="TipoComunicacion" Name="TipoComunicacion" ColName="nvarchar9" RowOrdinal="0" CustomFormatter="" Version="1" />
+            <Field Type="Text" DisplayName="Comentario" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{be873b29-26fe-45ae-b861-769bd7255216}" SourceID="{{listid:Comunicaciones}}" StaticName="Comentario" Name="Comentario" ColName="nvarchar10" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="PEP" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{17282b3f-97bd-49d6-a891-148679905bff}" SourceID="{{listid:Comunicaciones}}" StaticName="PEP" Name="PEP" ColName="nvarchar11" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="Grafo" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{148216fa-3247-42d0-9ce0-a923d0a579bf}" SourceID="{{listid:Comunicaciones}}" StaticName="Grafo" Name="Grafo" ColName="nvarchar12" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="Reserva" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{f3df349c-1feb-41a6-8c99-bb1f7eb99ff0}" SourceID="{{listid:Comunicaciones}}" StaticName="Reserva" Name="Reserva" ColName="nvarchar13" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="OE" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{22c4ab97-71d2-40a8-9038-ff990b17e479}" SourceID="{{listid:Comunicaciones}}" StaticName="OE" Name="OE" ColName="nvarchar14" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="Estado Teco" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="TRUE" MaxLength="255" ID="{455dfdfd-fdcf-4e4c-b7c1-d36126609a37}" SourceID="{{listid:Comunicaciones}}" StaticName="EstadoTeco" Name="EstadoTeco" ColName="nvarchar15" RowOrdinal="0" CustomFormatter="" Version="2" />
+            <Field Type="Text" DisplayName="Estado Contratista" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="TRUE" MaxLength="255" ID="{ae58ea3e-4bc4-4ff6-9234-73a9c50d9cc5}" SourceID="{{listid:Comunicaciones}}" StaticName="EstadoContratista" Name="EstadoContratista" ColName="nvarchar16" RowOrdinal="0" CustomFormatter="" Version="2" />
+            <Field Type="Number" DisplayName="ContratistaID" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="TRUE" ID="{0c311ee5-acc2-4f51-8890-a39e99d14d05}" SourceID="{{listid:Comunicaciones}}" StaticName="ContratistaID" Name="ContratistaID" ColName="float2" RowOrdinal="0" Version="1" />
+            <Field Type="Number" DisplayName="EventoID" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="TRUE" ID="{29d2334c-51b1-448e-98a9-42c5ca7f95cb}" SourceID="{{listid:Comunicaciones}}" StaticName="EventoID" Name="EventoID" ColName="float3" RowOrdinal="0" Version="1" />
+            <Field Type="DateTime" DisplayName="Fecha de Envío" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateTime" FriendlyDisplayFormat="Disabled" ID="{23a9bcef-b4d6-41eb-985c-ca9ae74410d6}" SourceID="{{listid:Comunicaciones}}" StaticName="FechaEnvio" Name="FechaEnvio" ColName="datetime2" RowOrdinal="0" CustomFormatter="" CalType="0" Version="2" />
+            <Field Type="Text" DisplayName="Email" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{724a51ab-70d0-482a-bf2e-ad0a1688e95a}" SourceID="{{listid:Comunicaciones}}" StaticName="Email" Name="Email" ColName="nvarchar17" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="EmailCC" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{1d60287e-1bc5-43ff-9840-aeb7511d9d97}" SourceID="{{listid:Comunicaciones}}" StaticName="EmailCC" Name="EmailCC" ColName="nvarchar18" RowOrdinal="0" />
+            <Field DisplayName="Acciones" Format="Hyperlink" Name="Acciones" Title="Acciones" Type="URL" ID="{790b7900-9629-4e02-ade2-8eafc56c2dd0}" SourceID="{{listid:Comunicaciones}}" StaticName="Acciones" ColName="nvarchar19" RowOrdinal="0" ColName2="nvarchar20" RowOrdinal2="0" CustomFormatter="{&#xA;  &quot;$schema&quot;: &quot;https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json&quot;,&#xA;  &quot;elmType&quot;: &quot;button&quot;,&#xA;  &quot;customRowAction&quot;: {&#xA;    &quot;action&quot;: &quot;executeFlow&quot;,&#xA;    &quot;actionParams&quot;: &quot;{\&quot;id\&quot;: \&quot;d597d323-f8c3-417e-92be-eb2d3fcfb612\&quot;, \&quot;headerText\&quot;: \&quot;Darse por Notificado, significa que ha leído y comprendido la orden de servicio o la nota de pedido.\&quot;, \&quot;runFlowButtonText\&quot;: \&quot;Notificado!\&quot;}&quot;&#xA;  },&#xA;  &quot;attributes&quot;: {&#xA;    &quot;class&quot;: &quot;ms-fontColor-themePrimary ms-fontColor-themeDarker--hover&quot;&#xA;  },&#xA;  &quot;style&quot;: {&#xA;    &quot;border&quot;: &quot;none&quot;,&#xA;    &quot;background-color&quot;: &quot;transparent&quot;,&#xA;    &quot;cursor&quot;: &quot;pointer&quot;&#xA;  },&#xA;  &quot;children&quot;: [&#xA;    {&#xA;      &quot;elmType&quot;: &quot;span&quot;,&#xA;      &quot;attributes&quot;: {&#xA;        &quot;iconName&quot;: &quot;Ringer&quot;&#xA;      },&#xA;      &quot;style&quot;: {&#xA;        &quot;padding-right&quot;: &quot;6px&quot;&#xA;      }&#xA;    },&#xA;    {&#xA;      &quot;elmType&quot;: &quot;span&quot;,&#xA;      &quot;txtContent&quot;: &quot;Notificado&quot;&#xA;    }&#xA;  ]&#xA;}" Version="6" />
+            <Field Type="Text" DisplayName="Estado de aprobación" Title="Estado de aprobación" StaticName="_Flow_SignoffStatus" ID="{5059a0ca-ab3c-4324-8349-9a2e4b965768}" SourceID="{{listid:Comunicaciones}}" Name="Estado_x0020_de_x0020_aprobaci_x" ColName="nvarchar21" RowOrdinal="0" />
+            <Field Type="Lookup" DisplayName="Evento" Required="TRUE" EnforceUniqueValues="FALSE" List="{listid:Eventos}" ShowField="Title" UnlimitedLengthInDocumentLibrary="FALSE" Indexed="TRUE" ID="{dd8e6b0e-ff2d-466c-815d-e17a3d2f191f}" SourceID="{{listid:Comunicaciones}}" StaticName="Evento" Name="Evento" ColName="int1" RowOrdinal="0" />
+            <Field Type="Lookup" DisplayName="Relacionada" Required="FALSE" EnforceUniqueValues="FALSE" List="{listid:Comunicaciones}" ShowField="Identificador" UnlimitedLengthInDocumentLibrary="FALSE" Indexed="TRUE" ID="{2d2c83cd-fe73-4b40-bd81-c88ebcab43f7}" SourceID="{{listid:Comunicaciones}}" StaticName="Relacionada" Name="Relacionada" ColName="int2" RowOrdinal="0" />
+          </pnp:Fields>
+          <pnp:DataRows UpdateBehavior="Overwrite">
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Evento HJR</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">&lt;div class="ExternalClass48D5058B66B247B0923DB2AE013B74EF"&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. &lt;em&gt;Itaque contra est, ac dicitis;&lt;/em&gt; Sin autem eos non probabat, quid attinuit cum iis, quibuscum re concinebat, verbis discrepare? Praeclare enim Plato&amp;#58; Beatum, cui etiam in senectute contigerit, ut sapientiam verasque opiniones assequi possit. Eam stabilem appellas. Ita multo sanguine profuso in laetitia et in victoria est mortuus. Quasi vero, inquit, perpetua oratio rhetorum solum, non etiam philosophorum sit.&lt;/p&gt;&lt;p&gt;Ita enim vivunt quidam, ut eorum vita refellatur oratio. Nos cum te, M.&lt;/p&gt;&lt;p&gt;Expressa vero in iis aetatibus, quae iam confirmatae sunt. Duo Reges&amp;#58; constructio interrete. &lt;a target="_blank" href="http&amp;#58;//loripsum.net/"&gt;Nos cum te, M.&lt;/a&gt; Neque enim civitas in seditione beata esse potest nec in discordia dominorum domus; Nihilne est in his rebus, quod dignum libero aut indignum esse ducamus? Utrum igitur tibi litteram videor an totas paginas commovere? Ut pulsi recurrant? Nobis aliter videtur, recte secusne, postea; Nam quid possumus facere melius? &lt;a target="_blank" href="http&amp;#58;//loripsum.net/"&gt;Poterat autem inpune;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</pnp:DataValue>
+              <pnp:DataValue FieldName="NPA">hjr-npa</pnp:DataValue>
+              <pnp:DataValue FieldName="Plazo">30/5/2019 3:00:00 a. m.</pnp:DataValue>
+              <pnp:DataValue FieldName="Region">Centro</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Córdoba</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">RAMIREZ HNOS SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Evento">33</pnp:DataValue>
+              <pnp:DataValue FieldName="EventoTipo">Tarea</pnp:DataValue>
+              <pnp:DataValue FieldName="Relacionada" />
+              <pnp:DataValue FieldName="Identificador">187</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoComunicacion">OS</pnp:DataValue>
+              <pnp:DataValue FieldName="Comentario" />
+              <pnp:DataValue FieldName="PEP" />
+              <pnp:DataValue FieldName="Grafo" />
+              <pnp:DataValue FieldName="Reserva" />
+              <pnp:DataValue FieldName="OE" />
+              <pnp:DataValue FieldName="EstadoTeco">Modificado por flujo</pnp:DataValue>
+              <pnp:DataValue FieldName="EstadoContratista">Modificado por flujo</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">7</pnp:DataValue>
+              <pnp:DataValue FieldName="EventoID">33</pnp:DataValue>
+              <pnp:DataValue FieldName="FechaEnvio">16/5/2019 8:18:15 p. m.</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">hramirez@proveedor.teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailCC" />
+              <pnp:DataValue FieldName="Acciones" />
+              <pnp:DataValue FieldName="Estado_x0020_de_x0020_aprobaci_x" />
+              <pnp:DataValue FieldName="Order">19800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">198_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Evento HJR Tarea con metadatos</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">&lt;div class="ExternalClass1526F75A60704D68A53494BB69E8910B"&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. &lt;a target="_blank" href="http&amp;#58;//loripsum.net/"&gt;Age, inquies, ista parva sunt.&lt;/a&gt; Si quae forte-possumus. Sed haec in pueris; Sullae consulatum? Duo Reges&amp;#58; constructio interrete. Sed nunc, quod agimus;&lt;/p&gt;&lt;p&gt;Tuo vero id quidem, inquam, arbitratu. Verum hoc idem saepe faciamus. Non potes, nisi retexueris illa. &lt;em&gt;Quam si explicavisset, non tam haesitaret.&lt;/em&gt; Nihil ad rem! Ne sit sane; Sullae consulatum?&lt;/p&gt;&lt;p&gt;Nihil enim iam habes, quod ad corpus referas; Hoc Hieronymus summum bonum esse dixit. Quos quidem tibi studiose et diligenter tractandos magnopere censeo. &lt;mark&gt;Quid est enim aliud esse versutum?&lt;/mark&gt;&lt;/p&gt;&lt;/div&gt;</pnp:DataValue>
+              <pnp:DataValue FieldName="NPA">hjr-npa</pnp:DataValue>
+              <pnp:DataValue FieldName="Plazo">30/5/2019 3:00:00 a. m.</pnp:DataValue>
+              <pnp:DataValue FieldName="Region">Centro</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Córdoba</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">RAMIREZ HNOS SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Evento">33</pnp:DataValue>
+              <pnp:DataValue FieldName="EventoTipo">Tarea</pnp:DataValue>
+              <pnp:DataValue FieldName="Relacionada" />
+              <pnp:DataValue FieldName="Identificador">188</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoComunicacion">OS</pnp:DataValue>
+              <pnp:DataValue FieldName="Comentario" />
+              <pnp:DataValue FieldName="PEP">hjr-pep</pnp:DataValue>
+              <pnp:DataValue FieldName="Grafo">hjr-grafo</pnp:DataValue>
+              <pnp:DataValue FieldName="Reserva">hjr-res</pnp:DataValue>
+              <pnp:DataValue FieldName="OE">hjr-oe</pnp:DataValue>
+              <pnp:DataValue FieldName="EstadoTeco">Enviada</pnp:DataValue>
+              <pnp:DataValue FieldName="EstadoContratista">Nueva</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">7</pnp:DataValue>
+              <pnp:DataValue FieldName="EventoID">33</pnp:DataValue>
+              <pnp:DataValue FieldName="FechaEnvio">16/5/2019 8:27:04 p. m.</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">hramirez@proveedor.teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailCC" />
+              <pnp:DataValue FieldName="Acciones" />
+              <pnp:DataValue FieldName="Estado_x0020_de_x0020_aprobaci_x" />
+              <pnp:DataValue FieldName="Order">19900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">199_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Informaciones genéricas</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">&lt;div class="ExternalClass3D1D156EA5E6475CB4AD223BA0DF1A05"&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non quam nostram quidem, inquit Pomponius iocans; Dat enim intervalla et relaxat.&lt;/p&gt;&lt;p&gt;Bonum incolumis acies&amp;#58; misera caecitas. &lt;strong&gt;Illud non continuo, ut aeque incontentae.&lt;/strong&gt; Sed ad rem redeamus; &lt;mark&gt;Equidem, sed audistine modo de Carneade?&lt;/mark&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Expressa vero in iis aetatibus, quae iam confirmatae sunt.&lt;/li&gt;&lt;li&gt;Cetera illa adhibebat, quibus demptis negat se Epicurus intellegere quid sit bonum.&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;Itaque ad tempus ad Pisonem omnes. Immo videri fortasse. &lt;strong&gt;Quae contraria sunt his, malane?&lt;/strong&gt; Bonum valitudo&amp;#58; miser morbus. &lt;a target="_blank" href="http&amp;#58;//loripsum.net/"&gt;Duo Reges&amp;#58; constructio interrete.&lt;/a&gt; Tum mihi Piso&amp;#58; Quid ergo?&lt;/p&gt;&lt;/div&gt;</pnp:DataValue>
+              <pnp:DataValue FieldName="NPA">hjr-npa</pnp:DataValue>
+              <pnp:DataValue FieldName="Plazo">21/5/2019 3:00:00 a. m.</pnp:DataValue>
+              <pnp:DataValue FieldName="Region">Centro</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Córdoba</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">RAMIREZ HNOS SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Evento">35</pnp:DataValue>
+              <pnp:DataValue FieldName="EventoTipo">Información</pnp:DataValue>
+              <pnp:DataValue FieldName="Relacionada" />
+              <pnp:DataValue FieldName="Identificador">189</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoComunicacion">OS</pnp:DataValue>
+              <pnp:DataValue FieldName="Comentario" />
+              <pnp:DataValue FieldName="PEP" />
+              <pnp:DataValue FieldName="Grafo" />
+              <pnp:DataValue FieldName="Reserva" />
+              <pnp:DataValue FieldName="OE" />
+              <pnp:DataValue FieldName="EstadoTeco">Modificado por flujo</pnp:DataValue>
+              <pnp:DataValue FieldName="EstadoContratista">Modificado por flujo</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">7</pnp:DataValue>
+              <pnp:DataValue FieldName="EventoID">35</pnp:DataValue>
+              <pnp:DataValue FieldName="FechaEnvio">16/5/2019 8:27:46 p. m.</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">hramirez@proveedor.teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailCC" />
+              <pnp:DataValue FieldName="Acciones" />
+              <pnp:DataValue FieldName="Estado_x0020_de_x0020_aprobaci_x" />
+              <pnp:DataValue FieldName="Order">20000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">200_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Evento HJR Nuevos Metadatos</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">&lt;div class="ExternalClass16A1D80B29C74E06B232A272864F9EE6"&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. &lt;a target="_blank" href="http&amp;#58;//loripsum.net/"&gt;Non est igitur summum malum dolor.&lt;/a&gt; Ne amores quidem sanctos a sapiente alienos esse arbitrantur. &lt;a target="_blank" href="http&amp;#58;//loripsum.net/"&gt;Sed plane dicit quod intellegit.&lt;/a&gt; &lt;mark&gt;Quid ait Aristoteles reliquique Platonis alumni?&lt;/mark&gt; Traditur, inquit, ab Epicuro ratio neglegendi doloris. Memini vero, inquam;&lt;/p&gt;&lt;p&gt;Iam enim adesse poterit.&lt;/p&gt;&lt;p&gt;Nec tamen ille erat sapiens quis enim hoc aut quando aut ubi aut unde?&lt;/p&gt;&lt;p&gt;Qui convenit?&lt;/p&gt;&lt;p&gt;Quantum Aristoxeni ingenium consumptum videmus in musicis?&lt;/p&gt;&lt;p&gt;Quo modo?&lt;/p&gt;&lt;p&gt;Hoc est dicere&amp;#58; Non reprehenderem asotos, si non essent asoti.&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Fieri, inquam, Triari, nullo pacto potest, ut non dicas, quid non probes eius, a quo dissentias.&lt;/li&gt;&lt;li&gt;Hic quoque suus est de summoque bono dissentiens dici vere Peripateticus non potest.&lt;/li&gt;&lt;li&gt;Cum enim summum bonum in voluptate ponat, negat infinito tempore aetatis voluptatem fieri maiorem quam finito atque modico.&lt;/li&gt;&lt;li&gt;Idemque diviserunt naturam hominis in animum et corpus.&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;Duo Reges&amp;#58; constructio interrete. &lt;a target="_blank" href="http&amp;#58;//loripsum.net/"&gt;Vide, quaeso, rectumne sit.&lt;/a&gt; At cum de plurimis eadem dicit, tum certe de maximis. Sed plane dicit quod intellegit.&lt;/p&gt;&lt;p&gt;&lt;mark&gt;Sed virtutem ipsam inchoavit, nihil amplius.&lt;/mark&gt; Hoc loco tenere se Triarius non potuit. Equidem, sed audistine modo de Carneade? At multis malis affectus. &lt;em&gt;Haec dicuntur inconstantissime.&lt;/em&gt; Sed fortuna fortis; Sed quid sentiat, non videtis. An hoc usque quaque, aliter in vita?&lt;/p&gt;&lt;/div&gt;</pnp:DataValue>
+              <pnp:DataValue FieldName="NPA">hjr-npa</pnp:DataValue>
+              <pnp:DataValue FieldName="Plazo" />
+              <pnp:DataValue FieldName="Region">Centro</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Córdoba</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">RAMIREZ HNOS SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Evento">33</pnp:DataValue>
+              <pnp:DataValue FieldName="EventoTipo">Tarea</pnp:DataValue>
+              <pnp:DataValue FieldName="Relacionada" />
+              <pnp:DataValue FieldName="Identificador">190</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoComunicacion">OS</pnp:DataValue>
+              <pnp:DataValue FieldName="Comentario" />
+              <pnp:DataValue FieldName="PEP">hjr-pep</pnp:DataValue>
+              <pnp:DataValue FieldName="Grafo">hjr-grafo</pnp:DataValue>
+              <pnp:DataValue FieldName="Reserva">hjr-res</pnp:DataValue>
+              <pnp:DataValue FieldName="OE">hjr-oe</pnp:DataValue>
+              <pnp:DataValue FieldName="EstadoTeco">Enviada</pnp:DataValue>
+              <pnp:DataValue FieldName="EstadoContratista">Nueva</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">7</pnp:DataValue>
+              <pnp:DataValue FieldName="EventoID">33</pnp:DataValue>
+              <pnp:DataValue FieldName="FechaEnvio">16/5/2019 8:39:00 p. m.</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">hramirez@proveedor.teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailCC" />
+              <pnp:DataValue FieldName="Acciones" />
+              <pnp:DataValue FieldName="Estado_x0020_de_x0020_aprobaci_x" />
+              <pnp:DataValue FieldName="Order">20100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">201_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Evento HJR Ultimo Estilo</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">&lt;div class="ExternalClassEEE1957F8F90456AAF9F9387C343098E"&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Istic sum, inquit. &lt;a target="_blank" href="http&amp;#58;//loripsum.net/"&gt;Quid de Pythagora?&lt;/a&gt; Simus igitur contenti his. &lt;a target="_blank" href="http&amp;#58;//loripsum.net/"&gt;Quid de Platone aut de Democrito loquar?&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Haec quo modo conveniant, non sane intellego. &lt;strong&gt;Minime vero, inquit ille, consentit.&lt;/strong&gt; &lt;em&gt;Nam de isto magna dissensio est.&lt;/em&gt; &lt;em&gt;Quas enim kakaw Graeci appellant, vitia malo quam malitias nominare.&lt;/em&gt; Suo enim quisque studio maxime ducitur. Num quid tale Democritus?&lt;/p&gt;&lt;p&gt;Quid de Pythagora?&lt;/p&gt;&lt;p&gt;Nam adhuc, meo fortasse vitio, quid ego quaeram non perspicis.&lt;/p&gt;&lt;p&gt;Negare non possum.&lt;/p&gt;&lt;p&gt;Dat enim intervalla et relaxat.&lt;/p&gt;&lt;p&gt;Tu quidem reddes;&lt;/p&gt;&lt;p&gt;Quod non faceret, si in voluptate summum bonum poneret.&lt;/p&gt;&lt;p&gt;Numquam facies.&lt;/p&gt;&lt;p&gt;Sed et illum, quem nominavi, et ceteros sophistas, ut e Platone intellegi potest, lusos videmus a Socrate.&lt;/p&gt;&lt;p&gt;&lt;a target="_blank" href="http&amp;#58;//loripsum.net/"&gt;Quod vestri non item.&lt;/a&gt; Duo Reges&amp;#58; constructio interrete. Age, inquies, ista parva sunt. Hoc loco tenere se Triarius non potuit.&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Quo igitur, inquit, modo?&lt;/li&gt;&lt;li&gt;Potius inflammat, ut coercendi magis quam dedocendi esse videantur.&lt;/li&gt;&lt;li&gt;Atque hoc loco similitudines eas, quibus illi uti solent, dissimillimas proferebas.&lt;/li&gt;&lt;li&gt;Est enim tanti philosophi tamque nobilis audacter sua decreta defendere.&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;</pnp:DataValue>
+              <pnp:DataValue FieldName="NPA">hjr-npa</pnp:DataValue>
+              <pnp:DataValue FieldName="Plazo">28/5/2019 3:00:00 a. m.</pnp:DataValue>
+              <pnp:DataValue FieldName="Region">Centro</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Córdoba</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">RAMIREZ HNOS SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Evento">33</pnp:DataValue>
+              <pnp:DataValue FieldName="EventoTipo">Tarea</pnp:DataValue>
+              <pnp:DataValue FieldName="Relacionada" />
+              <pnp:DataValue FieldName="Identificador">191</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoComunicacion">OS</pnp:DataValue>
+              <pnp:DataValue FieldName="Comentario" />
+              <pnp:DataValue FieldName="PEP">hjr-pep</pnp:DataValue>
+              <pnp:DataValue FieldName="Grafo">hjr-grafo</pnp:DataValue>
+              <pnp:DataValue FieldName="Reserva">hjr-res</pnp:DataValue>
+              <pnp:DataValue FieldName="OE">hjr-oe</pnp:DataValue>
+              <pnp:DataValue FieldName="EstadoTeco">Enviada</pnp:DataValue>
+              <pnp:DataValue FieldName="EstadoContratista">Nueva</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">7</pnp:DataValue>
+              <pnp:DataValue FieldName="EventoID">33</pnp:DataValue>
+              <pnp:DataValue FieldName="FechaEnvio">16/5/2019 8:53:49 p. m.</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">hramirez@proveedor.teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailCC" />
+              <pnp:DataValue FieldName="Acciones" />
+              <pnp:DataValue FieldName="Estado_x0020_de_x0020_aprobaci_x" />
+              <pnp:DataValue FieldName="Order">20200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">202_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Evento HJR Mas Ultimo</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">&lt;div class="ExternalClass3C16615533A940C6B161001C476B5450"&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cur, nisi quod turpis oratio est? Ad eos igitur converte te, quaeso. &lt;em&gt;Est enim effectrix multarum et magnarum voluptatum.&lt;/em&gt; Diodorus, eius auditor, adiungit ad honestatem vacuitatem doloris. Qua igitur re ab deo vincitur, si aeternitate non vincitur? Sic consequentibus vestris sublatis prima tolluntur. Illa argumenta propria videamus, cur omnia sint paria peccata. Duo Reges&amp;#58; constructio interrete. Istam voluptatem perpetuam quis potest praestare sapienti?&lt;/p&gt;&lt;p&gt;Minime vero istorum quidem, inquit. Sin aliud quid voles, postea.&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Cum audissem Antiochum, Brute, ut solebam, cum M.&lt;/li&gt;&lt;li&gt;Sed haec quidem liberius ab eo dicuntur et saepius.&lt;/li&gt;&lt;li&gt;An, partus ancillae sitne in fructu habendus, disseretur inter principes civitatis, P.&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;strong&gt;Qualem igitur hominem natura inchoavit?&lt;/strong&gt; Sed quid minus probandum quam esse aliquem beatum nec satis beatum? Quid est, quod ab ea absolvi et perfici debeat? Nihil enim desiderabile concupiscunt, plusque in ipsa iniuria detrimenti est quam in iis rebus emolumenti, quae pariuntur iniuria.&lt;/p&gt;&lt;/div&gt;</pnp:DataValue>
+              <pnp:DataValue FieldName="NPA">NPA-01</pnp:DataValue>
+              <pnp:DataValue FieldName="Plazo">27/5/2019 3:00:00 a. m.</pnp:DataValue>
+              <pnp:DataValue FieldName="Region">Centro</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Córdoba</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">RAMIREZ HNOS SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Evento">33</pnp:DataValue>
+              <pnp:DataValue FieldName="EventoTipo">Tarea</pnp:DataValue>
+              <pnp:DataValue FieldName="Relacionada" />
+              <pnp:DataValue FieldName="Identificador">192</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoComunicacion">OS</pnp:DataValue>
+              <pnp:DataValue FieldName="Comentario" />
+              <pnp:DataValue FieldName="PEP">PEP-007</pnp:DataValue>
+              <pnp:DataValue FieldName="Grafo">GR-123</pnp:DataValue>
+              <pnp:DataValue FieldName="Reserva">RES-092</pnp:DataValue>
+              <pnp:DataValue FieldName="OE">OE-345</pnp:DataValue>
+              <pnp:DataValue FieldName="EstadoTeco">Enviada</pnp:DataValue>
+              <pnp:DataValue FieldName="EstadoContratista">Nueva</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">7</pnp:DataValue>
+              <pnp:DataValue FieldName="EventoID">33</pnp:DataValue>
+              <pnp:DataValue FieldName="FechaEnvio">16/5/2019 9:03:10 p. m.</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">hramirez@proveedor.teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailCC" />
+              <pnp:DataValue FieldName="Acciones" />
+              <pnp:DataValue FieldName="Estado_x0020_de_x0020_aprobaci_x" />
+              <pnp:DataValue FieldName="Order">20300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">203_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">informe de riesgo de trabajo</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">&lt;div class="ExternalClass3EFA30497D9D409A8F4D087B09BEB4F5"&gt;&lt;p&gt;se solicita resolver &lt;strong&gt;el desvío siguiente&lt;/strong&gt;&lt;/p&gt;&lt;/div&gt;</pnp:DataValue>
+              <pnp:DataValue FieldName="NPA">4600232659</pnp:DataValue>
+              <pnp:DataValue FieldName="Plazo" />
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">CENTRAL SERVICIOS ESPECIALES SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Evento">53</pnp:DataValue>
+              <pnp:DataValue FieldName="EventoTipo">Riesgo de trabajo</pnp:DataValue>
+              <pnp:DataValue FieldName="Relacionada" />
+              <pnp:DataValue FieldName="Identificador">1</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoComunicacion">OS</pnp:DataValue>
+              <pnp:DataValue FieldName="Comentario" />
+              <pnp:DataValue FieldName="PEP" />
+              <pnp:DataValue FieldName="Grafo" />
+              <pnp:DataValue FieldName="Reserva" />
+              <pnp:DataValue FieldName="OE" />
+              <pnp:DataValue FieldName="EstadoTeco">Notificado</pnp:DataValue>
+              <pnp:DataValue FieldName="EstadoContratista">Notificado</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">9</pnp:DataValue>
+              <pnp:DataValue FieldName="EventoID">53</pnp:DataValue>
+              <pnp:DataValue FieldName="FechaEnvio">17/5/2019 11:08:35 a. m.</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">CAScattolaro@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailCC" />
+              <pnp:DataValue FieldName="Acciones" />
+              <pnp:DataValue FieldName="Estado_x0020_de_x0020_aprobaci_x" />
+              <pnp:DataValue FieldName="Order">20400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">204_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Rutinas Julio</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">&lt;div class="ExternalClass0CA277C87936455DBD4A357A52CAB415"&gt;Escriba el cuerpo del mensaje&lt;/div&gt;</pnp:DataValue>
+              <pnp:DataValue FieldName="NPA">4600052536</pnp:DataValue>
+              <pnp:DataValue FieldName="Plazo">24/7/2019 3:00:00 a. m.</pnp:DataValue>
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">POLYMONT</pnp:DataValue>
+              <pnp:DataValue FieldName="Evento">63</pnp:DataValue>
+              <pnp:DataValue FieldName="EventoTipo">Tarea</pnp:DataValue>
+              <pnp:DataValue FieldName="Relacionada" />
+              <pnp:DataValue FieldName="Identificador">22</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoComunicacion">OS</pnp:DataValue>
+              <pnp:DataValue FieldName="Comentario">Se solicita realizacion de rutinas correspondientes al mes de Julio, coordinar tareas con Juan Sandoval</pnp:DataValue>
+              <pnp:DataValue FieldName="PEP">MMTL-19-I1-940-H-OC-DE</pnp:DataValue>
+              <pnp:DataValue FieldName="Grafo" />
+              <pnp:DataValue FieldName="Reserva" />
+              <pnp:DataValue FieldName="OE">4800781615</pnp:DataValue>
+              <pnp:DataValue FieldName="EstadoTeco">Notificado</pnp:DataValue>
+              <pnp:DataValue FieldName="EstadoContratista">Notificado</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">18</pnp:DataValue>
+              <pnp:DataValue FieldName="EventoID">63</pnp:DataValue>
+              <pnp:DataValue FieldName="FechaEnvio">22/5/2019 5:28:48 p. m.</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">DEBonnin@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailCC" />
+              <pnp:DataValue FieldName="Acciones" />
+              <pnp:DataValue FieldName="Estado_x0020_de_x0020_aprobaci_x" />
+              <pnp:DataValue FieldName="Order">20500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">205_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Rutinas Julio</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">&lt;div class="ExternalClass3EBCDA5DA16A4E438B8161003BE4971E"&gt;Escriba el cuerpo del mensaje&lt;/div&gt;</pnp:DataValue>
+              <pnp:DataValue FieldName="NPA">4600052536</pnp:DataValue>
+              <pnp:DataValue FieldName="Plazo" />
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">POLYMONT</pnp:DataValue>
+              <pnp:DataValue FieldName="Evento">63</pnp:DataValue>
+              <pnp:DataValue FieldName="EventoTipo">Tarea</pnp:DataValue>
+              <pnp:DataValue FieldName="Relacionada">205</pnp:DataValue>
+              <pnp:DataValue FieldName="Identificador">1</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoComunicacion">NP</pnp:DataValue>
+              <pnp:DataValue FieldName="Comentario">Se confirma realizaciòn de rutinas para el 23-07, se remite Presupuesto</pnp:DataValue>
+              <pnp:DataValue FieldName="PEP">MMTL-19-I1-940-H-OC-DE</pnp:DataValue>
+              <pnp:DataValue FieldName="Grafo" />
+              <pnp:DataValue FieldName="Reserva" />
+              <pnp:DataValue FieldName="OE">4800781615</pnp:DataValue>
+              <pnp:DataValue FieldName="EstadoTeco">Nueva</pnp:DataValue>
+              <pnp:DataValue FieldName="EstadoContratista">Enviada</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">18</pnp:DataValue>
+              <pnp:DataValue FieldName="EventoID">63</pnp:DataValue>
+              <pnp:DataValue FieldName="FechaEnvio">22/5/2019 5:52:00 p. m.</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">DEBonnin@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailCC" />
+              <pnp:DataValue FieldName="Acciones" />
+              <pnp:DataValue FieldName="Estado_x0020_de_x0020_aprobaci_x" />
+              <pnp:DataValue FieldName="Order">20600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">206_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Solicitud de tareas FC zona Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">&lt;div class="ExternalClass1215141374E0455BBA56127D06B1DC12"&gt;&lt;p&gt;Se envia los datos para procesar los trabajos que se&amp;#160; solicitan&lt;/p&gt;&lt;/div&gt;</pnp:DataValue>
+              <pnp:DataValue FieldName="NPA">4600232659</pnp:DataValue>
+              <pnp:DataValue FieldName="Plazo" />
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">CENTRAL SERVICIOS ESPECIALES SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Evento">34</pnp:DataValue>
+              <pnp:DataValue FieldName="EventoTipo">Tarea</pnp:DataValue>
+              <pnp:DataValue FieldName="Relacionada" />
+              <pnp:DataValue FieldName="Identificador">2</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoComunicacion">OS</pnp:DataValue>
+              <pnp:DataValue FieldName="Comentario" />
+              <pnp:DataValue FieldName="PEP">MMTL-19-I1-940-H-OC-DE</pnp:DataValue>
+              <pnp:DataValue FieldName="Grafo" />
+              <pnp:DataValue FieldName="Reserva" />
+              <pnp:DataValue FieldName="OE">4800454556</pnp:DataValue>
+              <pnp:DataValue FieldName="EstadoTeco">Notificado</pnp:DataValue>
+              <pnp:DataValue FieldName="EstadoContratista">Notificado</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">9</pnp:DataValue>
+              <pnp:DataValue FieldName="EventoID">34</pnp:DataValue>
+              <pnp:DataValue FieldName="FechaEnvio">24/5/2019 2:08:05 p. m.</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">CAScattolaro@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailCC">cascattolaro@teco.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="Acciones" />
+              <pnp:DataValue FieldName="Estado_x0020_de_x0020_aprobaci_x" />
+              <pnp:DataValue FieldName="Order">20700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">207_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Email de pruebas</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">&lt;div class="ExternalClass1B57E10F42C64D1BB86D8E40D009F481"&gt;&lt;p&gt;Este es un mai de prueba del nuevo sistema de comunicaciones, simplemente&amp;#160; informar a la casilla de CHF_AO@teco.com.ar, si ha recibido este mail, muchas gracias&lt;/p&gt;&lt;/div&gt;</pnp:DataValue>
+              <pnp:DataValue FieldName="NPA">460022222</pnp:DataValue>
+              <pnp:DataValue FieldName="Plazo" />
+              <pnp:DataValue FieldName="Region">Litoral</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Chaco Formosa</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">SOTO COMUNICACIONES</pnp:DataValue>
+              <pnp:DataValue FieldName="Evento">65</pnp:DataValue>
+              <pnp:DataValue FieldName="EventoTipo">Genérico</pnp:DataValue>
+              <pnp:DataValue FieldName="Relacionada" />
+              <pnp:DataValue FieldName="Identificador">1</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoComunicacion">OS</pnp:DataValue>
+              <pnp:DataValue FieldName="Comentario" />
+              <pnp:DataValue FieldName="PEP" />
+              <pnp:DataValue FieldName="Grafo" />
+              <pnp:DataValue FieldName="Reserva" />
+              <pnp:DataValue FieldName="OE" />
+              <pnp:DataValue FieldName="EstadoTeco">Enviada</pnp:DataValue>
+              <pnp:DataValue FieldName="EstadoContratista">Nueva</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">39</pnp:DataValue>
+              <pnp:DataValue FieldName="EventoID">65</pnp:DataValue>
+              <pnp:DataValue FieldName="FechaEnvio">24/5/2019 7:36:34 p. m.</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">mauricio@sotocomunicaciones.com</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailCC" />
+              <pnp:DataValue FieldName="Acciones" />
+              <pnp:DataValue FieldName="Estado_x0020_de_x0020_aprobaci_x" />
+              <pnp:DataValue FieldName="Order">20800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">208_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Informaciones genéricas</pnp:DataValue>
+              <pnp:DataValue FieldName="Cuerpo">&lt;div class="ExternalClass41A9E43052B94F7BB4407F63587A6CF3"&gt;&lt;p&gt;&lt;em&gt;Facillimum id quidem est, inquam.&lt;/em&gt;&amp;#160;Utrum igitur percurri omnem Epicuri disciplinam placet an de una voluptate quaeri, de qua omne certamen est? Quo tandem modo? Possumusne ergo in vita summum bonum dicere, cum id ne in cena quidem posse videamur? Deinde prima illa, quae in congressu solemus&amp;#58; Quid tu, inquit, huc? Paulum, cum regem Persem captum adduceret, eodem flumine invectio? Commoda autem et incommoda in eo genere sunt, quae praeposita et reiecta diximus;&amp;#160;&lt;strong&gt;Ea possunt paria non esse.&lt;/strong&gt;&lt;/p&gt;&lt;/div&gt;</pnp:DataValue>
+              <pnp:DataValue FieldName="NPA" />
+              <pnp:DataValue FieldName="Plazo" />
+              <pnp:DataValue FieldName="Region">Centro</pnp:DataValue>
+              <pnp:DataValue FieldName="Subregion">Córdoba</pnp:DataValue>
+              <pnp:DataValue FieldName="Contratista">RAMIREZ HNOS SRL</pnp:DataValue>
+              <pnp:DataValue FieldName="Evento">35</pnp:DataValue>
+              <pnp:DataValue FieldName="EventoTipo">Información</pnp:DataValue>
+              <pnp:DataValue FieldName="Relacionada" />
+              <pnp:DataValue FieldName="Identificador">1</pnp:DataValue>
+              <pnp:DataValue FieldName="TipoComunicacion">NP</pnp:DataValue>
+              <pnp:DataValue FieldName="Comentario" />
+              <pnp:DataValue FieldName="PEP" />
+              <pnp:DataValue FieldName="Grafo" />
+              <pnp:DataValue FieldName="Reserva" />
+              <pnp:DataValue FieldName="OE" />
+              <pnp:DataValue FieldName="EstadoTeco">Nueva</pnp:DataValue>
+              <pnp:DataValue FieldName="EstadoContratista">Enviada</pnp:DataValue>
+              <pnp:DataValue FieldName="ContratistaID">7</pnp:DataValue>
+              <pnp:DataValue FieldName="EventoID">35</pnp:DataValue>
+              <pnp:DataValue FieldName="FechaEnvio">18/6/2019 4:39:46 p. m.</pnp:DataValue>
+              <pnp:DataValue FieldName="Email">hernan.ramirez@outlook.com.ar</pnp:DataValue>
+              <pnp:DataValue FieldName="EmailCC" />
+              <pnp:DataValue FieldName="Acciones" />
+              <pnp:DataValue FieldName="Estado_x0020_de_x0020_aprobaci_x" />
+              <pnp:DataValue FieldName="Order">20900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">209_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo" />
+            </pnp:DataRow>
+          </pnp:DataRows>
+          <pnp:Webhooks>
+            <pnp:Webhook ServerNotificationUrl="https://15-southcentralus1.pushp.svc.ms/notifications?token=w1-d56dcdb0-5528-4fab-81bd-a67bb782ed3a" ExpiresInDays="1" />
+          </pnp:Webhooks>
+        </pnp:ListInstance>
+      </pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

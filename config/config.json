@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "comunicaciones-de-contratistas-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/comunicacionesDeContratistas/ComunicacionesDeContratistasWebPart.js",
+          "manifest": "./src/webparts/comunicacionesDeContratistas/ComunicacionesDeContratistasWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ComunicacionesDeContratistasWebPartStrings": "lib/webparts/comunicacionesDeContratistas/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+  }
+}

@@ -1,0 +1,22 @@
+@import "~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss";
+
+.eventos {
+  .cabecera {
+    @include ms-font-xl;
+    @include ms-fontColor-white;
+    background-color: $ms-color-themePrimary;
+    padding: 20px;
+  }
+
+  .error {
+    color: $ms-color-red;
+
+    .msg {
+      font-style: italic;
+    }
+  }
+
+  .info {
+    text-align: center;
+  }
+}

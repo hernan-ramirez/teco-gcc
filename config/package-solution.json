@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "App GCC",
+    "title": "Aplicación de Gestión de Comunicaciones de Contratistas",
+    "id": "cdfbe6b2-1698-456d-b7db-1646aec0c448",
+    "version": "2.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "features": [
+      {
+        "title": "Listas GCC",
+        "description": "Instala las listas necesarias para la aplicación",
+        "id": "bb012b6f-7e11-44b1-9aa1-cbd3326945e7",
+        "version": "2.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/gcc-app.sppkg"
+  }
+}
