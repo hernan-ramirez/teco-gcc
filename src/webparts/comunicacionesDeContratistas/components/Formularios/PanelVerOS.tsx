@@ -14,6 +14,7 @@ import { WebPartContext } from "@microsoft/sp-webpart-base";
 import { IComunicacion } from '../Comunicaciones/IComunicacion';
 import { IEvento } from '../Eventos/IEvento';
 import { IListItemAttachmentFile } from '@pnp/spfx-controls-react/lib/ListItemAttachments';
+import Adjuntos from "./Adjuntos";
 
 
 /**
@@ -48,17 +49,20 @@ interface IPanelState {
  */
 export default class PanelVerOS extends React.Component<IPanelProps, IPanelState> {
 
+  private oAdjuntos: React.RefObject<Adjuntos>;
+
   constructor(props: IPanelProps) {
     super(props);
 
     this.state = {
       responder: false,
       loading: false,
-      identificador: 0,
+      identificador: 1,
       cuerpo: '',
       adjuntos: []
     };
 
+    this.oAdjuntos = React.createRef();
   }
 
   /**
@@ -83,7 +87,9 @@ export default class PanelVerOS extends React.Component<IPanelProps, IPanelState
       .top(1)
       .get()
       .then((com: IComunicacion[]) => {
-        this.setState({ identificador: com[0].Identificador + 1 });
+        if (com.length > 0) {
+          this.setState({ identificador: com[0].Identificador + 1 });
+        }
       });
   }
 
@@ -177,6 +183,7 @@ export default class PanelVerOS extends React.Component<IPanelProps, IPanelState
                 <Label className={styles.tituloCom}>Respuesta a la OS</Label>
                 <TextField prefix="Identificador" value={this.state.identificador.toString()} />
                 <RichText className={styles.cuerpoCom} onChange={(text) => this._onCuerpoChange(text)} isEditMode={true} />
+                <Adjuntos ref={this.oAdjuntos} />
               </div>
             }
 
@@ -319,6 +326,10 @@ export default class PanelVerOS extends React.Component<IPanelProps, IPanelState
         console.info(iar);
         np.ID = iar.data.ID;
         np.DisplayEnvio = new Date(iar.data.FechaEnvio).toLocaleString();
+
+        iar.item.attachmentFiles.addMultiple(this.oAdjuntos.current.state.adjuntos).then((r) => {
+          console.info(r);
+        });
 
         this.setState({ loading: false, responder: false });
         this.props.ocultar();

@@ -24,6 +24,7 @@ import { IContratista } from './IContratista';
  * Estado General de la Aplicación
  */
 interface IgccState {
+  usuario: string;
 
   /**
    * Contratista Actual seleccionado o logueado
@@ -72,6 +73,7 @@ export default class ComunicacionesDeContratistas extends React.Component<IgccPr
     super(props);
 
     this.state = {
+      usuario: null,
       contratistaActual: null,
       enviaA: null,
       eventoActual: null,
@@ -139,17 +141,25 @@ export default class ComunicacionesDeContratistas extends React.Component<IgccPr
 
     sp.web.currentUser.get().then((usuario: CurrentUser) => {
 
+      this.setState({
+        usuario: usuario['Title']
+      });
+
       sp.web.lists
         .getByTitle("Contratistas").items
         .filter("Email eq '" + usuario['Email'] + "'")
         .get()
         .then((items: IContratista[]): void => {
-
-          this.setState({
-            contratistaActual: items[0].Title,
-            enviaA: items[0].EmailDevolucion
-          });
-
+          if (items.length > 0) {
+            this.setState({
+              contratistaActual: items[0].Title,
+              enviaA: items[0].EmailDevolucion
+            });
+          }else{
+            this.setState({
+              contratistaActual: 'NoReg'
+            });            
+          }
         });
 
     });
@@ -164,16 +174,8 @@ export default class ComunicacionesDeContratistas extends React.Component<IgccPr
 
     return (
       <div className={styles.comunicacionesDeContratistas}>
-        {contratistaActual &&
+        {contratistaActual && contratistaActual!='NoReg' &&
           <div>
-            {/* <div className={styles.container}>
-              <div className={styles.row}>
-                <div className={styles.column}>
-                  <span className={styles.title}>¡Bienvenido {contratistaActual}!</span>
-                </div>
-              </div>
-            </div> */}
-
             <div className="ms-Grid" dir="ltr">
               <div className="ms-Grid-row">
                 <div className={styles.eventos}>
@@ -208,7 +210,17 @@ export default class ComunicacionesDeContratistas extends React.Component<IgccPr
               ocultar={this._ocultarPaneles}
               onEnviada={this._agregarNuevaNP}
             />
-          </div>}
+          </div>
+        } 
+        {contratistaActual=='NoReg' &&
+          <div className={styles.container}>
+            <div className={styles.row}>
+              <div className={styles.column}>
+                <span className={styles.title}>¡Bienvenido {this.state.usuario}! Aún no estás registrado como Contratista.</span>
+              </div>
+            </div>
+          </div>
+        }
       </div>
     );
   }

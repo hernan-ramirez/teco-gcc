@@ -12,6 +12,7 @@ import styles from "./Panel.module.scss";
 
 import { IComunicacion } from '../Comunicaciones/IComunicacion';
 import { IEvento } from '../Eventos/IEvento';
+import Adjuntos from "./Adjuntos";
 
 
 /**
@@ -41,17 +42,20 @@ interface IPanelState {
  */
 export default class PanelNuevaNP extends React.Component<IPanelProps, IPanelState> {
 
+  private oAdjuntos: React.RefObject<Adjuntos>;
+
   constructor(props: IPanelProps) {
     super(props);
 
     this.state = {
       loading: false,
-      identificador: 0,
+      identificador: 1,
       titulo: '',
       cuerpo: '',
       adjuntos: []
     };
 
+    this.oAdjuntos = React.createRef();
   }
 
   /**
@@ -65,7 +69,9 @@ export default class PanelNuevaNP extends React.Component<IPanelProps, IPanelSta
       .top(1)
       .get()
       .then((com: IComunicacion[]) => {
-        this.setState({ identificador: com[0].Identificador + 1 });
+        if (com.length > 0) {
+          this.setState({ identificador: com[0].Identificador + 1 });
+        }
       });
   }
 
@@ -115,47 +121,7 @@ export default class PanelNuevaNP extends React.Component<IPanelProps, IPanelSta
             <RichText className={styles.cuerpoCom} value={this.state.cuerpo} onChange={(text) => this._onCuerpoChange(text)} isEditMode={true} />
             <br />
 
-            <input type="file"
-              id="fileupload"
-              style={{ display: "none" }}
-              accept="image/*,.pdf, .doc, .docx, .xls, .xlsx"
-              onChange={(e) => this._onAdjuntosChange(e.target.files)}
-              multiple
-            />
-
-            <ActionButton
-              iconProps={{ iconName: 'Attach' }}
-              text="Adjuntar archivos"
-              onClick={(e) => document.getElementById("fileupload").click()}
-            >Adjuntar archivos</ActionButton>
-
-            {this.state.adjuntos.length > 0 &&
-              <ListView
-                items={this.state.adjuntos}
-                viewFields={[
-                  {
-                    name: "name",
-                    displayName: "Adjuntos",
-                    sorting: true,
-                    isResizable: true
-                  },
-                  {
-                    name: "",
-                    sorting: false,
-                    maxWidth: 30,
-                    render: (item: AttachmentFileInfo, index) => {
-                      return (
-                        <IconButton
-                          iconProps={{ iconName: 'Delete' }}
-                          onClick={(e) => this._removerAdjunto(index)}
-                        />
-                      );
-                    }
-                  }
-                ]}
-                iconFieldName="name"
-              />
-            }
+            <Adjuntos ref={this.oAdjuntos} />
 
           </Panel>
         }
@@ -227,7 +193,7 @@ export default class PanelNuevaNP extends React.Component<IPanelProps, IPanelSta
         np.ID = iar.data.ID;
         np.DisplayEnvio = new Date(iar.data.FechaEnvio).toLocaleString();
 
-        iar.item.attachmentFiles.addMultiple(this.state.adjuntos).then((r) => {
+        iar.item.attachmentFiles.addMultiple(this.oAdjuntos.current.state.adjuntos).then((r) => {
           console.info(r);
         });
 
@@ -277,39 +243,4 @@ export default class PanelNuevaNP extends React.Component<IPanelProps, IPanelSta
     return newText;
   }
 
-  /**
-   * Evento al agregar archivos adjuntos
-   */
-  private _onAdjuntosChange = (filelist: FileList) => {
-
-    [].forEach.call(filelist, (file: File) => {
-
-      let reader = new FileReader();
-      reader.readAsArrayBuffer(file);
-
-      reader.onload = () => {
-        this.setState({
-          adjuntos: [...this.state.adjuntos, {
-            name: file.name,
-            content: reader.result
-          }]
-        });
-      };
-      reader.onerror = () => {
-        console.error(reader.error);
-      };
-
-    });
-
-  }
-
-  /**
-   * Evento para remover un adjunto
-   */
-  private _removerAdjunto = (index: number) => {
-    const removidos = this.state.adjuntos.splice(index, 1);
-    this.setState({
-      adjuntos: this.state.adjuntos
-    });
-  }
 }
