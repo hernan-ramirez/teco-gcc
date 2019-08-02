@@ -145,7 +145,7 @@ export default class PanelVerOS extends React.Component<IPanelProps, IPanelState
 
             {!this.state.responder &&
               <div>
-                <div dangerouslySetInnerHTML={{ __html: comunicacion.Cuerpo }} />
+                <div className={styles.cuerpoComDisplay} dangerouslySetInnerHTML={{ __html: comunicacion.Cuerpo }} />
                 <div>
                   {this.state.adjuntos.length > 0 &&
                     <ListView
