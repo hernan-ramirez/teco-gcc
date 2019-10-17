@@ -179,10 +179,13 @@ export default class PanelNuevaNP extends React.Component<IPanelProps, IPanelSta
       EventoTipo: e.TipoEvento,
       EstadoTeco: "Nueva",
       EstadoContratista: "Enviada",
-      FechaEnvio: new Date().toISOString(),
-      Email: this.props.enviarA
+      FechaEnvio: new Date().toISOString()
 
     };
+
+    sp.web.lists.getByTitle("Contratistas").items.getById(e.ContratistaID).get().then((item: any) => {
+      np.Email = item.EmailDevolucion;
+    }).then(()=>{
 
     sp.web.lists
       .getByTitle("Comunicaciones").items
@@ -206,8 +209,9 @@ export default class PanelNuevaNP extends React.Component<IPanelProps, IPanelSta
         });
 
         this.props.onEnviada(np);
-
       });
+
+    });
 
   }
 

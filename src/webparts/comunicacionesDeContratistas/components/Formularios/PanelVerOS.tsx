@@ -307,7 +307,6 @@ export default class PanelVerOS extends React.Component<IPanelProps, IPanelState
       EstadoTeco: "Nueva",
       EstadoContratista: "Enviada",
       FechaEnvio: new Date().toISOString(),
-      Email: this.props.enviarA,
       RelacionadaId: c.ID,
 
       NPA: c.NPA,
@@ -317,6 +316,10 @@ export default class PanelVerOS extends React.Component<IPanelProps, IPanelState
       OE: c.OE
 
     };
+
+    sp.web.lists.getByTitle("Contratistas").items.getById(c.ContratistaID).get().then((item: any) => {
+      np.Email = item.EmailDevolucion;
+    }).then(()=>{
 
     sp.web.lists
       .getByTitle("Comunicaciones").items
@@ -334,8 +337,9 @@ export default class PanelVerOS extends React.Component<IPanelProps, IPanelState
         this.setState({ loading: false, responder: false });
         this.props.ocultar();
         this.props.onEnviada(np);
-
       });
+
+    });
 
   }
 

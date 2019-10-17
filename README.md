@@ -69,6 +69,15 @@ https://docs.microsoft.com/en-us/powershell/module/sharepoint-pnp/add-pnpapp?vie
 # Agrega y publica el SPFX
 Add-PnPApp -Path ".\sharepoint\solution\gcc-app.sppkg" -Scope Site -Overwrite -Publish -SkipFeatureDeployment -Connection $siteConn
 ```
+
+Para este último paso, el scipt completo para conexión y publicación en producción seria:
+```bash
+# Si se trabaja con varias versiones de modulos instalados, fijar la que se usará
+# Import-Module -Name "C:\Program Files\WindowsPowerShell\Modules\SharePointPnPPowerShellOnline\3.14.1910.0\SharePointPnPPowerShellOnline.psd1" -DisableNameChecking
+Connect-PnPOnline -Url https://cablevisionfibertel.sharepoint.com/sites/gcc -Credential Get-Credential
+Add-PnPApp -Path ".\sharepoint\solution\gcc-app.sppkg" -Scope Site -Overwrite -Publish -SkipFeatureDeployment
+```
+
 Luego de esto, ir al sitio y:
 * En la lista de `Contratistas` crear un nuevo contratista o editar uno con tu mail de login en el campo `EmailNotificacion`
 * Crear una página.
